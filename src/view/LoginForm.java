@@ -119,11 +119,19 @@ public class LoginForm extends javax.swing.JFrame {
         
         if(loginDao.checkLogin(login)){
         JOptionPane.showMessageDialog(null,"you are logged in !!");
+        jTextField1.setText("");
+        jPasswordField1.setText("");
+        jTextField1.requestFocusInWindow();
+
         MainLibrayForm mainForm =new MainLibrayForm();
         mainForm.setVisible(true);
+        
             
         }else{
             JOptionPane.showMessageDialog(null, "Username  or Password error!!");
+            jTextField1.setText("");
+            jPasswordField1.setText("");
+            jTextField1.requestFocusInWindow();
         }
     }//GEN-LAST:event_jButton1ActionPerformed
 
