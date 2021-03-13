@@ -39,13 +39,18 @@ public class LoginDao {
         session = sf.openSession();
         tx = session.beginTransaction();
         Query q=session.createQuery(hql);
+        Object lg=q.uniqueResult();
         tx.commit();
         session.close();
-        if(q!=null){
-            return true;
-        }else{
-            return false;
-        }
+       if(lg!=null){
+           
+        return true;
+       }else{
+           return false;
+       }
+            
+        
+        
     }
     public void createAcount(Login login){
         conf = new Configuration().configure().addAnnotatedClass(Login.class);
