@@ -53,6 +53,7 @@ public class MainLibrayForm extends javax.swing.JFrame {
         jMenu1.setText("System Form");
 
         jMenuItem1.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_F, java.awt.event.InputEvent.CTRL_MASK));
+        jMenuItem1.setMnemonic('C');
         jMenuItem1.setText("Client Form");
         jMenuItem1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
